@@ -73,7 +73,7 @@
     <script id="hexo-configurations">
     let Global = window.Global || {};
     Global.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
-    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":true,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/light.jpg","dark":"/images/dark.jpg"},"title":"李竞伟的踩坑日记","subtitle":{"text":["铁饭碗的真实含义不是在一个地方吃一辈子饭，而是一辈子到哪儿都有饭吃。"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":"https://github.com/wohaorea","instagram":null,"zhihu":null,"twitter":null,"email":"178220013@qq.com"}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.2.2","navbar":{"auto_hide":false,"color":{"left":"#fff","right":"#367df7","transparency":20},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":true,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/light.jpg","dark":"/images/dark.jpg"},"title":"李竞伟的踩坑日记","subtitle":{"text":["铁饭碗的真实含义不是在一个地方吃一辈子饭，而是一辈子到哪儿都有饭吃。"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":"https://github.com/wohaorea","instagram":null,"zhihu":null,"twitter":null,"email":"178220013@qq.com"}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.2.2","navbar":{"auto_hide":false,"color":{"left":"#fff","right":"#367df7","transparency":20},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":{"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
     Global.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
     Global.data_config = {"masonry":false};
   </script>
@@ -206,10 +206,16 @@
                             </li>
                     
                     
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
                 </ul>
             </div>
             <!-- Mobile -->
             <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
                 
                 <div class="icon-item navbar-bar">
                     <div class="navbar-bar-middle"></div>
@@ -255,7 +261,35 @@
     <div class="sticky-container">
         
             
-            <div class="sidebar-content" >
+                <div class="sidebar-links">
+                    <div class="site-info">
+                        <div class="site-name">李竞伟的个人博客</div>
+                        
+                    </div>
+                    
+                        
+                            
+                                <a class="links" href="/tags">
+                                    
+                                        <i class="fa-regular fa-tags icon-space"></i>
+                                    
+                                    <span class="link-name">Tags</span>
+                                </a>
+                            
+                        
+                            
+                                <a class="links" href="/categories">
+                                    
+                                        <i class="fa-regular fa-folder icon-space"></i>
+                                    
+                                    <span class="link-name">Categories</span>
+                                </a>
+                            
+                        
+                    
+                </div>
+            
+            <div class="sidebar-content"  marginTop >
                 <div class="avatar">
                     <img src="/images/avatar.jpg">
                 </div>
@@ -267,11 +301,11 @@
                 </div>
                 <div class="statistics">
                     <a class="item" href="/tags">
-                        <div class="number">0</div>
+                        <div class="number">2</div>
                         <div class="label">标签</div>
                     </a>
                     <a class="item" href="/categories">
-                        <div class="number">0</div>
+                        <div class="number">2</div>
                         <div class="label">分类</div>
                     </a>
                     <a class="item" href="/archives">
@@ -296,12 +330,82 @@
             <li class="home-article-item">
 
                 
+                    <div class="home-article-sticky-label">
+                        <i class="fa-regular fa-thumbtack"></i>置顶
+                    </div>
+                
 
                 
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/07/17/el-upload%E7%BB%84%E4%BB%B6%E6%8A%A5TypeError%20Cannot%20create%20property%20%E2%80%98uid%E2%80%98%20on%20string%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
+                    <a href="/2022/09/28/vue%E9%A1%B9%E7%9B%AE%E5%BC%95%E5%85%A5%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BEBMapGL%E5%92%8CBMap%E5%AE%9E%E4%BE%8B%EF%BC%8C%E4%BB%A5%E5%8F%8A%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7BMapGLLib%20%E7%9A%84%E5%BC%95%E5%85%A5%EF%BC%8CBMapGL%E9%BC%A0%E6%A0%87%E7%BB%98%E5%88%B6%E5%8A%9F%E8%83%BD/">
+                        vue项目引入百度地图BMapGL和BMap实例，以及辅助工具BMapGLLib 的引入，BMapGL鼠标绘制功能
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        记录一下vue项目使用百度地图所用的api和踩过的坑，减少以后引用少走弯路。旨在记录，第一次开贴，不足之处请多多指教。废话不多说，开撸！1、引用百度地图这里账号密钥不多说，上链接 ，自己注册。
+首先要在你项目的index.html里面加上以下代码：这...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fa-solid fa-calendars"></i>&nbsp;
+            <span class="home-article-date" data-date="Wed Sep 28 2022 11:45:14 GMT+0800">
+                
+                    2022-09-28
+                
+            </span>
+        </span>
+        
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0/">功能实现</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/vue%E9%A1%B9%E7%9B%AE/">vue项目</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2022/09/28/vue%E9%A1%B9%E7%9B%AE%E5%BC%95%E5%85%A5%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BEBMapGL%E5%92%8CBMap%E5%AE%9E%E4%BE%8B%EF%BC%8C%E4%BB%A5%E5%8F%8A%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7BMapGLLib%20%E7%9A%84%E5%BC%95%E5%85%A5%EF%BC%8CBMapGL%E9%BC%A0%E6%A0%87%E7%BB%98%E5%88%B6%E5%8A%9F%E8%83%BD/">阅读全文<span class="seo-reader-text">vue项目引入百度地图BMapGL和BMap实例，以及辅助工具BMapGLLib 的引入，BMapGL鼠标绘制功能</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/02/28/el-upload%E7%BB%84%E4%BB%B6%E6%8A%A5TypeError%20Cannot%20create%20property%20%E2%80%98uid%E2%80%98%20on%20string%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
                         el-upload组件报TypeError Cannot create property ‘uid‘ on string错误解决方法
                     </a>
                 </h3>
@@ -316,17 +420,45 @@
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Jul 17 2023 11:08:27 GMT+0800">
+            <span class="home-article-date" data-date="Tue Feb 28 2023 18:05:14 GMT+0800">
                 
-                    2023-07-17
+                    2023-02-28
                 
             </span>
         </span>
         
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E8%B8%A9%E5%9D%91%E6%97%A5%E8%AE%B0/">踩坑日记</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/vue%E9%A1%B9%E7%9B%AE/">vue项目</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
         
     </div>
 
-    <a href="/2023/07/17/el-upload%E7%BB%84%E4%BB%B6%E6%8A%A5TypeError%20Cannot%20create%20property%20%E2%80%98uid%E2%80%98%20on%20string%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">阅读全文<span class="seo-reader-text">el-upload组件报TypeError Cannot create property ‘uid‘ on string错误解决方法</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2023/02/28/el-upload%E7%BB%84%E4%BB%B6%E6%8A%A5TypeError%20Cannot%20create%20property%20%E2%80%98uid%E2%80%98%20on%20string%E9%94%99%E8%AF%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">阅读全文<span class="seo-reader-text">el-upload组件报TypeError Cannot create property ‘uid‘ on string错误解决方法</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -339,44 +471,7 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/07/17/js%E5%AE%9E%E7%8E%B0%E8%B6%85%E6%9C%80%E5%A4%A7%E8%8C%83%E5%9B%B4%E7%9A%84%E6%95%B0%E7%9B%B8%E5%8A%A0%E4%B9%8B%E5%92%8C/">
-                        js实现超最大范围的数相加之和
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        记录一下今天上班实战开发实现的一个功能：用js实现超最大范围的数相加之和。旨在记录，有不足之处请多多指教。废话不多说，开撸！在最大安全整数范围内求和的方法有很多很多，这里不多赘述。这里提供几个思路，求超过最大安全范围内之和。这里要求，传入两个字符串（...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Jul 17 2023 10:59:19 GMT+0800">
-                
-                    2023-07-17
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2023/07/17/js%E5%AE%9E%E7%8E%B0%E8%B6%85%E6%9C%80%E5%A4%A7%E8%8C%83%E5%9B%B4%E7%9A%84%E6%95%B0%E7%9B%B8%E5%8A%A0%E4%B9%8B%E5%92%8C/">阅读全文<span class="seo-reader-text">js实现超最大范围的数相加之和</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/07/17/vue%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8html2canvas%E5%BA%93%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5%E6%88%AA%E5%B1%8F%E7%9A%84%E5%8A%9F%E8%83%BD/">
+                    <a href="/2022/11/15/vue%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8html2canvas%E5%BA%93%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5%E6%88%AA%E5%B1%8F%E7%9A%84%E5%8A%9F%E8%83%BD/">
                         vue项目使用html2canvas库实现网页截屏的功能
                     </a>
                 </h3>
@@ -392,17 +487,45 @@
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Jul 17 2023 09:45:48 GMT+0800">
+            <span class="home-article-date" data-date="Tue Nov 15 2022 17:45:14 GMT+0800">
                 
-                    2023-07-17
+                    2022-11-15
                 
             </span>
         </span>
         
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0/">功能实现</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/vue%E9%A1%B9%E7%9B%AE/">vue项目</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
         
     </div>
 
-    <a href="/2023/07/17/vue%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8html2canvas%E5%BA%93%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5%E6%88%AA%E5%B1%8F%E7%9A%84%E5%8A%9F%E8%83%BD/">阅读全文<span class="seo-reader-text">vue项目使用html2canvas库实现网页截屏的功能</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2022/11/15/vue%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8html2canvas%E5%BA%93%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5%E6%88%AA%E5%B1%8F%E7%9A%84%E5%8A%9F%E8%83%BD/">阅读全文<span class="seo-reader-text">vue项目使用html2canvas库实现网页截屏的功能</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -415,7 +538,7 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/07/17/js%E5%AE%9E%E7%8E%B0%E4%B8%A4%E4%B8%AA%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%EF%BC%8C%E8%A6%81%E6%B1%82%E5%89%8D%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E5%AE%8C%E6%88%90%EF%BC%8C%E6%8B%BF%E5%89%8D%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E7%9A%84%E7%BB%93%E6%9E%9C%EF%BC%8C%E8%AF%B7%E6%B1%82%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E3%80%82/">
+                    <a href="/2021/03/28/js%E5%AE%9E%E7%8E%B0%E4%B8%A4%E4%B8%AA%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%EF%BC%8C%E8%A6%81%E6%B1%82%E5%89%8D%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E5%AE%8C%E6%88%90%EF%BC%8C%E6%8B%BF%E5%89%8D%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E7%9A%84%E7%BB%93%E6%9E%9C%EF%BC%8C%E8%AF%B7%E6%B1%82%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E3%80%82/">
                         js实现两个异步请求，要求前一个请求完成，拿前一个请求的结果，请求下一个数据。
                     </a>
                 </h3>
@@ -429,17 +552,45 @@
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Jul 17 2023 09:42:13 GMT+0800">
+            <span class="home-article-date" data-date="Sun Mar 28 2021 15:22:14 GMT+0800">
                 
-                    2023-07-17
+                    2021-03-28
                 
             </span>
         </span>
         
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0/">功能实现</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/js%E8%BF%90%E7%94%A8/">js运用</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
         
     </div>
 
-    <a href="/2023/07/17/js%E5%AE%9E%E7%8E%B0%E4%B8%A4%E4%B8%AA%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%EF%BC%8C%E8%A6%81%E6%B1%82%E5%89%8D%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E5%AE%8C%E6%88%90%EF%BC%8C%E6%8B%BF%E5%89%8D%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E7%9A%84%E7%BB%93%E6%9E%9C%EF%BC%8C%E8%AF%B7%E6%B1%82%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E3%80%82/">阅读全文<span class="seo-reader-text">js实现两个异步请求，要求前一个请求完成，拿前一个请求的结果，请求下一个数据。</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2021/03/28/js%E5%AE%9E%E7%8E%B0%E4%B8%A4%E4%B8%AA%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%EF%BC%8C%E8%A6%81%E6%B1%82%E5%89%8D%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E5%AE%8C%E6%88%90%EF%BC%8C%E6%8B%BF%E5%89%8D%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E7%9A%84%E7%BB%93%E6%9E%9C%EF%BC%8C%E8%AF%B7%E6%B1%82%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E3%80%82/">阅读全文<span class="seo-reader-text">js实现两个异步请求，要求前一个请求完成，拿前一个请求的结果，请求下一个数据。</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -452,32 +603,59 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/07/14/vue%E9%A1%B9%E7%9B%AE%E5%BC%95%E5%85%A5%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BEBMapGL%E5%92%8CBMap%E5%AE%9E%E4%BE%8B%EF%BC%8C%E4%BB%A5%E5%8F%8A%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7BMapGLLib%20%E7%9A%84%E5%BC%95%E5%85%A5%EF%BC%8CBMapGL%E9%BC%A0%E6%A0%87%E7%BB%98%E5%88%B6%E5%8A%9F%E8%83%BD/">
-                        vue项目引入百度地图BMapGL和BMap实例，以及辅助工具BMapGLLib 的引入，BMapGL鼠标绘制功能
+                    <a href="/2021/01/15/js%E5%AE%9E%E7%8E%B0%E8%B6%85%E6%9C%80%E5%A4%A7%E8%8C%83%E5%9B%B4%E7%9A%84%E6%95%B0%E7%9B%B8%E5%8A%A0%E4%B9%8B%E5%92%8C/">
+                        js实现超最大范围的数相加之和
                     </a>
                 </h3>
 
                 <div class="home-article-content markdown-body">
                     
-                        记录一下vue项目使用百度地图所用的api和踩过的坑，减少以后引用少走弯路。旨在记录，第一次开贴，不足之处请多多指教。废话不多说，开撸！1、引用百度地图这里账号密钥不多说，上链接 ，自己注册。
-首先要在你项目的index.html里面加上以下代码：这...
+                        记录一下今天上班实战开发实现的一个功能：用js实现超最大范围的数相加之和。旨在记录，有不足之处请多多指教。废话不多说，开撸！在最大安全整数范围内求和的方法有很多很多，这里不多赘述。这里提供几个思路，求超过最大安全范围内之和。这里要求，传入两个字符串（...
                     
                 </div>
 
                 <div class="home-article-meta-info-container">
     <div class="home-article-meta-info">
         <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Jul 14 2023 09:56:53 GMT+0800">
+            <span class="home-article-date" data-date="Fri Jan 15 2021 16:23:56 GMT+0800">
                 
-                    2023-07-14
+                    2021-01-15
                 
             </span>
         </span>
         
+            <span class="home-article-category">
+                <i class="fa-solid fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0/">功能实现</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fa-solid fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/js%E8%BF%90%E7%94%A8/">js运用</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
         
     </div>
 
-    <a href="/2023/07/14/vue%E9%A1%B9%E7%9B%AE%E5%BC%95%E5%85%A5%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BEBMapGL%E5%92%8CBMap%E5%AE%9E%E4%BE%8B%EF%BC%8C%E4%BB%A5%E5%8F%8A%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7BMapGLLib%20%E7%9A%84%E5%BC%95%E5%85%A5%EF%BC%8CBMapGL%E9%BC%A0%E6%A0%87%E7%BB%98%E5%88%B6%E5%8A%9F%E8%83%BD/">阅读全文<span class="seo-reader-text">vue项目引入百度地图BMapGL和BMap实例，以及辅助工具BMapGLLib 的引入，BMapGL鼠标绘制功能</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    <a href="/2021/01/15/js%E5%AE%9E%E7%8E%B0%E8%B6%85%E6%9C%80%E5%A4%A7%E8%8C%83%E5%9B%B4%E7%9A%84%E6%95%B0%E7%9B%B8%E5%8A%A0%E4%B9%8B%E5%92%8C/">阅读全文<span class="seo-reader-text">js实现超最大范围的数相加之和</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -617,6 +795,35 @@
 
 
     
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 
 
 </main>
@@ -635,6 +842,10 @@
 
 <script src="/js/tools/lightDarkSwitch.js"></script>
 
+
+
+    
+<script src="/js/tools/localSearch.js"></script>
 
 
 

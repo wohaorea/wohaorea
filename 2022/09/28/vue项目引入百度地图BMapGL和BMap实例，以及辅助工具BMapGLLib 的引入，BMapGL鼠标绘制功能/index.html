@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/07/14/vue项目引入百度地图bmapgl和bmap实例，以及辅助工具bmapgllib 的引入，bmapgl鼠标绘制功能/"/>
+    <link rel="canonical" href="http://example.com/2022/09/28/vue项目引入百度地图bmapgl和bmap实例，以及辅助工具bmapgllib 的引入，bmapgl鼠标绘制功能/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -21,7 +21,7 @@
         <meta name="description" content="记录一下vue项目使用百度地图所用的api和踩过的坑，减少以后引用少走弯路。旨在记录，第一次开贴，不足之处请多多指教。废话不多说，开撸！1、引用百度地图这里账号密钥不多说，上链接 ，自己注册。 首先要在你项目的index.html里面加上以下代码：这个是BMap 1&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;&#x2F;api.map.bai">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue项目引入百度地图BMapGL和BMap实例，以及辅助工具BMapGLLib 的引入，BMapGL鼠标绘制功能">
-<meta property="og:url" content="http://example.com/2023/07/14/vue%E9%A1%B9%E7%9B%AE%E5%BC%95%E5%85%A5%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BEBMapGL%E5%92%8CBMap%E5%AE%9E%E4%BE%8B%EF%BC%8C%E4%BB%A5%E5%8F%8A%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7BMapGLLib%20%E7%9A%84%E5%BC%95%E5%85%A5%EF%BC%8CBMapGL%E9%BC%A0%E6%A0%87%E7%BB%98%E5%88%B6%E5%8A%9F%E8%83%BD/index.html">
+<meta property="og:url" content="http://example.com/2022/09/28/vue%E9%A1%B9%E7%9B%AE%E5%BC%95%E5%85%A5%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BEBMapGL%E5%92%8CBMap%E5%AE%9E%E4%BE%8B%EF%BC%8C%E4%BB%A5%E5%8F%8A%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7BMapGLLib%20%E7%9A%84%E5%BC%95%E5%85%A5%EF%BC%8CBMapGL%E9%BC%A0%E6%A0%87%E7%BB%98%E5%88%B6%E5%8A%9F%E8%83%BD/index.html">
 <meta property="og:site_name" content="李竞伟的个人博客">
 <meta property="og:description" content="记录一下vue项目使用百度地图所用的api和踩过的坑，减少以后引用少走弯路。旨在记录，第一次开贴，不足之处请多多指教。废话不多说，开撸！1、引用百度地图这里账号密钥不多说，上链接 ，自己注册。 首先要在你项目的index.html里面加上以下代码：这个是BMap 1&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;&#x2F;api.map.bai">
 <meta property="og:locale" content="zh_CN">
@@ -29,9 +29,10 @@
 <meta property="og:image" content="http://example.com/images/sl2.jpg">
 <meta property="og:image" content="http://example.com/images/sl3.jpg">
 <meta property="og:image" content="http://example.com/images/bqb.jpg">
-<meta property="article:published_time" content="2023-07-14T01:56:53.094Z">
-<meta property="article:modified_time" content="2023-07-14T09:54:56.520Z">
+<meta property="article:published_time" content="2022-09-28T03:45:14.000Z">
+<meta property="article:modified_time" content="2023-07-17T05:50:07.213Z">
 <meta property="article:author" content="李竞伟">
+<meta property="article:tag" content="vue项目">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/sl1.jpg">
     
@@ -82,7 +83,7 @@
     <script id="hexo-configurations">
     let Global = window.Global || {};
     Global.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
-    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":true,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/light.jpg","dark":"/images/dark.jpg"},"title":"李竞伟的踩坑日记","subtitle":{"text":["铁饭碗的真实含义不是在一个地方吃一辈子饭，而是一辈子到哪儿都有饭吃。"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":"https://github.com/wohaorea","instagram":null,"zhihu":null,"twitter":null,"email":"178220013@qq.com"}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.2.2","navbar":{"auto_hide":false,"color":{"left":"#fff","right":"#367df7","transparency":20},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":true,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/light.jpg","dark":"/images/dark.jpg"},"title":"李竞伟的踩坑日记","subtitle":{"text":["铁饭碗的真实含义不是在一个地方吃一辈子饭，而是一辈子到哪儿都有饭吃。"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":"https://github.com/wohaorea","instagram":null,"zhihu":null,"twitter":null,"email":"178220013@qq.com"}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.2.2","navbar":{"auto_hide":false,"color":{"left":"#fff","right":"#367df7","transparency":20},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":{"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
     Global.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
     Global.data_config = {"masonry":false};
   </script>
@@ -167,10 +168,16 @@
                             </li>
                     
                     
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
                 </ul>
             </div>
             <!-- Mobile -->
             <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
                 
                 <div class="icon-item navbar-bar">
                     <div class="navbar-bar-middle"></div>
@@ -244,20 +251,47 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-07-14 09:56:53</span>
-        <span class="mobile">2023-07-14 09:56:53</span>
+        <span class="desktop">2022-09-28 11:45:14</span>
+        <span class="mobile">2022-09-28 11:45:14</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-07-14 17:54:56</span>
-            <span class="mobile">2023-07-14 17:54:56</span>
+            <span class="desktop">2023-07-17 13:50:07</span>
+            <span class="mobile">2023-07-17 13:50:07</span>
             <span class="hover-info">更新</span>
         </span>
     
 
     
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0/">功能实现</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/vue%E9%A1%B9%E7%9B%AE/">vue项目</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
@@ -299,32 +333,32 @@
 <p><strong>注意：</strong><br>在使用百度地图JavaScript API服务时，需使用百度BD09坐标，如使用其他坐标（ WGS84、GCJ02）进行展示，需先将其他坐标转换为BD09，详细说明请参考坐标转换说明，请勿使用非官方的转换方法。</p>
 <p>（4）地图初始化</p>
 <div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  <span class="title function_">created</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">mapId</span> = <span class="string">&#x27;map&#x27;</span> + <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getTime</span>();</span><br><span class="line">  <span class="keyword">const</span> point = <span class="keyword">new</span> <span class="title class_">BMapGL</span>.<span class="title class_">Point</span>(<span class="number">116.404</span>, <span class="number">39.915</span>);</span><br><span class="line">  <span class="comment">//创建地图</span></span><br><span class="line">  <span class="variable language_">this</span>.$nextTick(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="title function_">createMap</span>(point.<span class="property">lng</span>, point.<span class="property">lat</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></div>
-<p>到现在为止，百度地图就在你页面上创建成功了。<br>附图片：<br><img  
+<p>到现在为止，百度地图就在你页面上创建成功了。<br>附图片：<br><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="/images/sl1.jpg"
                       alt="vue引入百度地图BMap"
-                ></p>
+                ><figcaption>vue引入百度地图BMap</figcaption></figure></p>
 <h2 id="3、在项目中使用百度地图辅助工具BMapGLLib"><a href="#3、在项目中使用百度地图辅助工具BMapGLLib" class="headerlink" title="3、在项目中使用百度地图辅助工具BMapGLLib"></a>3、在项目中使用百度地图辅助工具BMapGLLib</h2><p>现在的需求就是需要在页面上标注点，画矩形，圆形的一些标注线。百度地图的辅助工具就刚好自带了这两个功能。</p>
 <h3 id="3-1、页面结构部分"><a href="#3-1、页面结构部分" class="headerlink" title="3-1、页面结构部分"></a>3-1、页面结构部分</h3><p>（1）辅助工具栏html结构和css样式</p>
 <div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul <span class="keyword">class</span>=<span class="string">&quot;drawing-panel&quot;</span>&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;bmap-btn bmap-marker&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;draw(&#x27;marker&#x27;)&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">:style</span>=<span class="string">&quot;&#123; &#x27;background-position-y&#x27;: actNav === &#x27;marker&#x27; ? &#x27;-52px&#x27; : &#x27;0px&#x27; &#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;bmap-btn bmap-polyline&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;draw(&#x27;polyline&#x27;)&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">:style</span>=<span class="string">&quot;&#123; &#x27;background-position-y&#x27;: actNav === &#x27;polyline&#x27; ? &#x27;-52px&#x27; : &#x27;0px&#x27; &#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;bmap-btn bmap-rectangle&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;draw(&#x27;rectangle&#x27;)&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">:style</span>=<span class="string">&quot;&#123; &#x27;background-position-y&#x27;: actNav === &#x27;rectangle&#x27; ? &#x27;-52px&#x27; : &#x27;0px&#x27; &#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;bmap-btn bmap-polygon&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;draw(&#x27;polygon&#x27;)&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">:style</span>=<span class="string">&quot;&#123; &#x27;background-position-y&#x27;: actNav === &#x27;polygon&#x27; ? &#x27;-52px&#x27; : &#x27;0px&#x27; &#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">&quot;bmap-btn bmap-circle&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;draw(&#x27;circle&#x27;)&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="language-xml">    <span class="attr">:style</span>=<span class="string">&quot;&#123; &#x27;background-position-y&#x27;: actNav === &#x27;circle&#x27; ? &#x27;-52px&#x27; : &#x27;0px&#x27; &#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure></div>
 
 <div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">.<span class="property">drawing</span>-panel &#123;</span><br><span class="line">  z-<span class="attr">index</span>: <span class="number">999</span>;</span><br><span class="line">  <span class="attr">position</span>: absolute;</span><br><span class="line">  <span class="attr">top</span>: 14rem;</span><br><span class="line">  margin-<span class="attr">left</span>: <span class="number">2.</span>5rem;</span><br><span class="line">  padding-<span class="attr">left</span>: <span class="number">0</span>;</span><br><span class="line">  border-<span class="attr">radius</span>: .25rem;</span><br><span class="line">  <span class="attr">height</span>: 47px;</span><br><span class="line">  box-<span class="attr">shadow</span>: <span class="number">0</span> 2px 6px <span class="number">0</span> <span class="title function_">rgba</span>(<span class="number">27</span>, <span class="number">142</span>, <span class="number">236</span>, <span class="number">0.5</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.<span class="property">bmap</span>-btn &#123;</span><br><span class="line">  border-<span class="attr">right</span>: 1px solid #d2d2d2;</span><br><span class="line">  <span class="attr">float</span>: left;</span><br><span class="line">  <span class="attr">width</span>: 64px;</span><br><span class="line">  <span class="attr">height</span>: <span class="number">100</span>%;</span><br><span class="line">  background-<span class="attr">image</span>: <span class="title function_">url</span>(<span class="comment">//api.map.baidu.com/library/DrawingManager/1.4/src/bg_drawing_tool.png);</span></span><br><span class="line">  <span class="attr">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.<span class="property">drawing</span>-panel .<span class="property">bmap</span>-marker &#123;</span><br><span class="line">  background-<span class="attr">position</span>: -65px <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.<span class="property">drawing</span>-panel .<span class="property">bmap</span>-polyline &#123;</span><br><span class="line">  background-<span class="attr">position</span>: -195px <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.<span class="property">drawing</span>-panel .<span class="property">bmap</span>-rectangle &#123;</span><br><span class="line">  background-<span class="attr">position</span>: -325px <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.<span class="property">drawing</span>-panel .<span class="property">bmap</span>-polygon &#123;</span><br><span class="line">  background-<span class="attr">position</span>: -260px <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.<span class="property">drawing</span>-panel .<span class="property">bmap</span>-circle &#123;</span><br><span class="line">  background-<span class="attr">position</span>: -130px <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
-<p>结构搭完效果如下：<br><img  
+<p>结构搭完效果如下：<br><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="/images/sl2.jpg"
                       alt="辅助工具BMapGLLib"
-                ></p>
+                ><figcaption>辅助工具BMapGLLib</figcaption></figure></p>
 <h3 id="3-2、js逻辑部分"><a href="#3-2、js逻辑部分" class="headerlink" title="3-2、js逻辑部分"></a>3-2、js逻辑部分</h3><p>上面地图初始完后就能使用鼠标绘制工具进行需求的绘制<br>（1）实例化鼠标绘制工具</p>
 <div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">draw</span>(<span class="params">drawingType</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(drawingType, <span class="string">&#x27;666&#x27;</span>)</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">actNav</span> = drawingType</span><br><span class="line">  <span class="comment">/**这里看需求可以把它设置为全局变量。</span></span><br><span class="line"><span class="comment">  *我这里需求需要，故设置了全局变量，以下代码就注释掉了*/</span></span><br><span class="line">  <span class="comment">// const styleOptions = &#123;</span></span><br><span class="line">  <span class="comment">//   strokeColor: &#x27;#5E87DB&#x27;,   // 边线颜色</span></span><br><span class="line">  <span class="comment">//   fillColor: &#x27;#5E87DB&#x27;,     // 填充颜色。当参数为空时，圆形没有填充颜色</span></span><br><span class="line">  <span class="comment">//   strokeWeight: 2,          // 边线宽度，以像素为单位</span></span><br><span class="line">  <span class="comment">//   strokeOpacity: 1,         // 边线透明度，取值范围0-1</span></span><br><span class="line">  <span class="comment">//   fillOpacity: 0.2          // 填充透明度，取值范围0-1</span></span><br><span class="line">  <span class="comment">// &#125;;</span></span><br><span class="line">  <span class="comment">// const labelOptions = &#123;</span></span><br><span class="line">  <span class="comment">//   borderRadius: &#x27;2px&#x27;,</span></span><br><span class="line">  <span class="comment">//   background: &#x27;#FFFBCC&#x27;,</span></span><br><span class="line">  <span class="comment">//   border: &#x27;1px solid #E1E1E1&#x27;,</span></span><br><span class="line">  <span class="comment">//   color: &#x27;#703A04&#x27;,</span></span><br><span class="line">  <span class="comment">//   fontSize: &#x27;12px&#x27;,</span></span><br><span class="line">  <span class="comment">//   letterSpacing: &#x27;0&#x27;,</span></span><br><span class="line">  <span class="comment">//   padding: &#x27;5px&#x27;</span></span><br><span class="line">  <span class="comment">// &#125;;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 实例化鼠标绘制工具</span></span><br><span class="line">  <span class="keyword">const</span> drawingManager = <span class="keyword">new</span> <span class="title class_">BMapGLLib</span>.<span class="title class_">DrawingManager</span>(<span class="variable language_">this</span>.<span class="property">map</span>, &#123;</span><br><span class="line">    <span class="comment">//isOpen: true,        // 是否开启绘制模式</span></span><br><span class="line">    <span class="attr">enableCalculate</span>: <span class="literal">false</span>, <span class="comment">// 绘制是否进行测距测面</span></span><br><span class="line">    <span class="attr">enableSorption</span>: <span class="literal">true</span>, <span class="comment">// 是否开启边界吸附功能</span></span><br><span class="line">    <span class="attr">sorptiondistance</span>: <span class="number">20</span>, <span class="comment">// 边界吸附距离</span></span><br><span class="line">    <span class="attr">circleOptions</span>: <span class="variable language_">this</span>.<span class="property">styleOptions</span>, <span class="comment">// 圆的样式</span></span><br><span class="line">    <span class="attr">polylineOptions</span>: <span class="variable language_">this</span>.<span class="property">styleOptions</span>, <span class="comment">// 线的样式</span></span><br><span class="line">    <span class="attr">polygonOptions</span>: <span class="variable language_">this</span>.<span class="property">styleOptions</span>, <span class="comment">// 多边形的样式</span></span><br><span class="line">    <span class="attr">rectangleOptions</span>: <span class="variable language_">this</span>.<span class="property">styleOptions</span>, <span class="comment">// 矩形的样式</span></span><br><span class="line">    <span class="attr">labelOptions</span>: <span class="variable language_">this</span>.<span class="property">labelOptions</span>,  <span class="comment">// label样式</span></span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="comment">// 进行绘制</span></span><br><span class="line">  <span class="keyword">if</span> (drawingManager.<span class="property">_isOpen</span> &amp;&amp; drawingManager.<span class="title function_">getDrawingMode</span>() === drawingType) &#123;</span><br><span class="line">    drawingManager.<span class="title function_">close</span>();</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    drawingManager.<span class="title function_">setDrawingMode</span>(drawingType);</span><br><span class="line">    drawingManager.<span class="title function_">open</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">/** 我这里需求是圆形和矩形还有点的标注，</span></span><br><span class="line"><span class="comment">  *还有两种就没有写它的监听事件，也是差不多的，</span></span><br><span class="line"><span class="comment">  *可以对照一下官方api和我写的就基本上差不多了，</span></span><br><span class="line"><span class="comment">  *如果有谁需要，我有时间也可以继续把剩下两种监听事件补上 */</span></span><br><span class="line">  <span class="comment">// 监听事件</span></span><br><span class="line">  <span class="keyword">if</span> (drawingType == <span class="string">&#x27;rectangle&#x27;</span>) &#123;</span><br><span class="line">    <span class="comment">// 监听矩形绘制完成事件</span></span><br><span class="line">    drawingManager.<span class="title function_">addEventListener</span>(<span class="string">&quot;overlaycomplete&quot;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// 获取矩形对象</span></span><br><span class="line">      <span class="keyword">const</span> rectangle = e.<span class="property">overlay</span>;</span><br><span class="line">      <span class="comment">// 获取矩形的四个顶点</span></span><br><span class="line">      <span class="keyword">const</span> points = rectangle.<span class="title function_">getPath</span>();</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(points, <span class="string">&quot;顶点&quot;</span>);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">scope_point</span> = points;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (drawingType == <span class="string">&#x27;circle&#x27;</span>) &#123;</span><br><span class="line">    <span class="comment">// 监听圆形绘制完成事件</span></span><br><span class="line">    drawingManager.<span class="title function_">addEventListener</span>(<span class="string">&quot;overlaycomplete&quot;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// 获取圆形对象</span></span><br><span class="line">      <span class="keyword">const</span> circle = e.<span class="property">overlay</span>;</span><br><span class="line">      <span class="comment">// 获取圆形的圆心</span></span><br><span class="line">      <span class="keyword">const</span> center = circle.<span class="title function_">getCenter</span>();</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(center, <span class="string">&quot;圆心&quot;</span>);</span><br><span class="line">      <span class="comment">// 获取圆形的半径</span></span><br><span class="line">      <span class="keyword">const</span> radius = circle.<span class="title function_">getRadius</span>();</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(radius, <span class="string">&quot;半径&quot;</span>);</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">scope_point</span> = center;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">scope_radius</span> = radius;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (drawingType == <span class="string">&#x27;marker&#x27;</span>) &#123;</span><br><span class="line">    drawingManager.<span class="title function_">addEventListener</span>(<span class="string">&quot;overlaycomplete&quot;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// 获取标注对象</span></span><br><span class="line">      <span class="keyword">const</span> marker = e.<span class="property">overlay</span>;</span><br><span class="line">      <span class="comment">// 获取标注的经纬度坐标</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">point</span> = marker.<span class="title function_">getPosition</span>();</span><br><span class="line">      <span class="comment">// 创建地理编码服务实例</span></span><br><span class="line">      <span class="keyword">const</span> geocoder = <span class="keyword">new</span> <span class="title class_">BMapGL</span>.<span class="title class_">Geocoder</span>();</span><br><span class="line">      <span class="comment">// 将经纬度坐标解析为地址信息</span></span><br><span class="line">      geocoder.<span class="title function_">getLocation</span>(<span class="variable language_">this</span>.<span class="property">point</span>, <span class="function">(<span class="params">result</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">newForm</span>.<span class="property">address</span> = result.<span class="property">address</span>;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">point</span>, result.<span class="property">address</span>, <span class="string">&quot;地址&quot;</span>);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></div>
 
-<p>效果如图所示（我只需要这三种，其他注释掉了）：<br><img  
+<p>效果如图所示（我只需要这三种，其他注释掉了）：<br><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="/images/sl3.jpg"
                       alt="BMapGL鼠标绘制功能"
-                ></p>
+                ><figcaption>BMapGL鼠标绘制功能</figcaption></figure></p>
 <h2 id="4、在项目中使用BMap实例"><a href="#4、在项目中使用BMap实例" class="headerlink" title="4、在项目中使用BMap实例"></a>4、在项目中使用BMap实例</h2><p><strong>注意：</strong><br>大坑来啦！！！ BMapGL 类创建的地图实例不支持 addOverlay 方法,并且还不支持直接使用鼠标绘制工具（BMapLib.DrawingManager 类）在地图上绘制矩形框,故只能换成BMap)写完才知道，只能硬着头皮往下写，因为我需要展示出刚刚画的那些标注。。。<br>（1）重新初始化一个地图实例（BMap）</p>
 <div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">this</span>.<span class="property">map</span> = <span class="keyword">new</span> <span class="title class_">BMap</span>.<span class="title class_">Map</span>(<span class="variable language_">this</span>.<span class="property">mapId</span>, &#123; <span class="attr">enableMapClick</span>: <span class="literal">false</span> &#125;);</span><br><span class="line"><span class="variable language_">this</span>.<span class="property">map</span>.<span class="title function_">centerAndZoom</span>(<span class="keyword">new</span> <span class="title class_">BMap</span>.<span class="title class_">Point</span>(point_location[<span class="number">1</span>], point_location[<span class="number">0</span>]), <span class="number">11</span>)      <span class="comment">// 初始化地图,设置中心点坐标和地图级别我这里的point_location是后台返回的坐标，跟上面的类似</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">map</span>.<span class="title function_">enableScrollWheelZoom</span>(<span class="literal">true</span>)<span class="comment">// 开启鼠标滚轮缩放</span></span><br></pre></td></tr></table></figure></div>
 <p>（2）创建标记点</p>
@@ -334,12 +368,12 @@
 <p>（4）创建圆形对象</p>
 <div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建圆心坐标</span></span><br><span class="line"><span class="keyword">const</span> center = <span class="keyword">new</span> <span class="title class_">BMap</span>.<span class="title class_">Point</span>(<span class="variable language_">this</span>.<span class="property">rectangle</span>[<span class="number">1</span>], <span class="variable language_">this</span>.<span class="property">rectangle</span>[<span class="number">0</span>]);<span class="comment">//rectangle后台返回的圆形坐标</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建圆形标注对象</span></span><br><span class="line"><span class="keyword">const</span> circle = <span class="keyword">new</span> <span class="title class_">BMap</span>.<span class="title class_">Circle</span>(center, <span class="variable language_">this</span>.<span class="property">scope_radius</span>, <span class="variable language_">this</span>.<span class="property">styleOptions</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将圆形标注添加到地图上</span></span><br><span class="line"><span class="variable language_">this</span>.<span class="property">map</span>.<span class="title function_">addOverlay</span>(circle);</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="5、打完收工，下班！！！"><a href="#5、打完收工，下班！！！" class="headerlink" title="5、打完收工，下班！！！"></a>5、打完收工，下班！！！<img  
+<h2 id="5、打完收工，下班！！！"><a href="#5、打完收工，下班！！！" class="headerlink" title="5、打完收工，下班！！！"></a>5、打完收工，下班！！！<figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="/images/bqb.jpg"
                       alt="下班！"
-                ></h2>
+                ><figcaption>下班！</figcaption></figure></h2>
             </div>
 
             
@@ -348,14 +382,14 @@
     <ul>
         <li><strong>标题:</strong> vue项目引入百度地图BMapGL和BMap实例，以及辅助工具BMapGLLib 的引入，BMapGL鼠标绘制功能</li>
         <li><strong>作者:</strong> 李竞伟</li>
-        <li><strong>创建于:</strong> 2023-07-14 09:56:53</li>
+        <li><strong>创建于:</strong> 2022-09-28 11:45:14</li>
         
             <li>
-                <strong>更新于:</strong> 2023-07-14 17:54:56
+                <strong>更新于:</strong> 2023-07-17 13:50:07
             </li>
         
         <li>
-            <strong>链接:</strong> https://redefine.ohevan.com/2023/07/14/vue项目引入百度地图BMapGL和BMap实例，以及辅助工具BMapGLLib 的引入，BMapGL鼠标绘制功能/
+            <strong>链接:</strong> https://redefine.ohevan.com/2022/09/28/vue项目引入百度地图BMapGL和BMap实例，以及辅助工具BMapGLLib 的引入，BMapGL鼠标绘制功能/
         </li>
         <li>
             <strong>版权声明:</strong> 本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 进行许可。
@@ -367,6 +401,14 @@
             
 
             
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/vue%E9%A1%B9%E7%9B%AE/">#vue项目</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
 
             
 
@@ -376,67 +418,38 @@
                         <div class="article-prev">
                             <a class="prev"
                             rel="prev"
-                            href="/2023/07/17/js%E5%AE%9E%E7%8E%B0%E4%B8%A4%E4%B8%AA%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%EF%BC%8C%E8%A6%81%E6%B1%82%E5%89%8D%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E5%AE%8C%E6%88%90%EF%BC%8C%E6%8B%BF%E5%89%8D%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E7%9A%84%E7%BB%93%E6%9E%9C%EF%BC%8C%E8%AF%B7%E6%B1%82%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E3%80%82/"
+                            href="/2022/11/15/vue%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8html2canvas%E5%BA%93%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5%E6%88%AA%E5%B1%8F%E7%9A%84%E5%8A%9F%E8%83%BD/"
                             >
                                 <span class="left arrow-icon flex-center">
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">js实现两个异步请求，要求前一个请求完成，拿前一个请求的结果，请求下一个数据。</span>
+                                    <span class="post-nav-title-item">vue项目使用html2canvas库实现网页截屏的功能</span>
                                     <span class="post-nav-item">上一篇</span>
                                 </span>
                             </a>
                         </div>
                     
                     
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2021/03/28/js%E5%AE%9E%E7%8E%B0%E4%B8%A4%E4%B8%AA%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%EF%BC%8C%E8%A6%81%E6%B1%82%E5%89%8D%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E5%AE%8C%E6%88%90%EF%BC%8C%E6%8B%BF%E5%89%8D%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E7%9A%84%E7%BB%93%E6%9E%9C%EF%BC%8C%E8%AF%B7%E6%B1%82%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E3%80%82/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">js实现两个异步请求，要求前一个请求完成，拿前一个请求的结果，请求下一个数据。</span>
+                                    <span class="post-nav-item">下一篇</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
                 </div>
             
 
 
-            
-                <div class="comment-container">
-                    <div class="comments-container">
-    <div id="comment-anchor"></div>
-    <div class="comment-area-title">
-        <i class="fa-solid fa-comments"></i>&nbsp;评论
-    </div>
-    
-
-        
-            
- 
-    <div id="waline"></div>
-    <script type="module"  data-pjax>
-        import { init } from 'https://evan.beee.top/js/waline.mjs';
-
-        function loadWaline() {
-            init({
-                el: '#waline',
-                serverURL: 'https://example.example.com',
-                lang: 'zh-CN',
-                dark: 'body[class~="dark-mode"]',
-                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
-            });
-        }
-
-        if ('true') {
-            const loadWalineTimeout = setTimeout(() => {
-                loadWaline();
-                clearTimeout(loadWalineTimeout);
-            }, 1000);
-        } else {
-            window.addEventListener('DOMContentLoaded', loadWaline);
-        }
-        
-    </script>
-
-
-
-        
-    
-</div>
-
-                </div>
             
         </div>
 
@@ -446,7 +459,7 @@
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
         <div class="page-title">vue项目引入百度地图BMapGL和BMap实例，以及辅助工具BMapGLLib 的引入，BMapGL鼠标绘制功能</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%BC%95%E7%94%A8%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE"><span class="nav-text">1、引用百度地图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE"><span class="nav-text">2、在项目中使用百度地图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1%E3%80%81%E9%A1%B5%E9%9D%A2%E7%BB%93%E6%9E%84%E9%83%A8%E5%88%86"><span class="nav-text">2-1、页面结构部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2%E3%80%81js%E9%80%BB%E8%BE%91%E9%83%A8%E5%88%86"><span class="nav-text">2-2、js逻辑部分</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7BMapGLLib"><span class="nav-text">3、在项目中使用百度地图辅助工具BMapGLLib</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1%E3%80%81%E9%A1%B5%E9%9D%A2%E7%BB%93%E6%9E%84%E9%83%A8%E5%88%86"><span class="nav-text">3-1、页面结构部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2%E3%80%81js%E9%80%BB%E8%BE%91%E9%83%A8%E5%88%86"><span class="nav-text">3-2、js逻辑部分</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8BMap%E5%AE%9E%E4%BE%8B"><span class="nav-text">4、在项目中使用BMap实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E6%89%93%E5%AE%8C%E6%94%B6%E5%B7%A5%EF%BC%8C%E4%B8%8B%E7%8F%AD%EF%BC%81%EF%BC%81%EF%BC%81"><span class="nav-text">5、打完收工，下班！！！</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%BC%95%E7%94%A8%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE"><span class="nav-text">1、引用百度地图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE"><span class="nav-text">2、在项目中使用百度地图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1%E3%80%81%E9%A1%B5%E9%9D%A2%E7%BB%93%E6%9E%84%E9%83%A8%E5%88%86"><span class="nav-text">2-1、页面结构部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2%E3%80%81js%E9%80%BB%E8%BE%91%E9%83%A8%E5%88%86"><span class="nav-text">2-2、js逻辑部分</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BE%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7BMapGLLib"><span class="nav-text">3、在项目中使用百度地图辅助工具BMapGLLib</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1%E3%80%81%E9%A1%B5%E9%9D%A2%E7%BB%93%E6%9E%84%E9%83%A8%E5%88%86"><span class="nav-text">3-1、页面结构部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2%E3%80%81js%E9%80%BB%E8%BE%91%E9%83%A8%E5%88%86"><span class="nav-text">3-2、js逻辑部分</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8BMap%E5%AE%9E%E4%BE%8B"><span class="nav-text">4、在项目中使用BMap实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E6%89%93%E5%AE%8C%E6%94%B6%E5%B7%A5%EF%BC%8C%E4%B8%8B%E7%8F%AD%EF%BC%81%EF%BC%81%EF%BC%81"><span class="nav-text">5、打完收工，下班！！！下班！</span></a></li></ol>
 
     </div>
 </div>
@@ -541,10 +554,6 @@
 
         <!-- go comment -->
         
-            <li class="go-comment">
-                <i class="fa-regular fa-comments"></i>
-            </li>
-        
     </ul>
 </div>
 
@@ -602,6 +611,35 @@
 
 
     
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 
 
 </main>
@@ -619,6 +657,10 @@
 
 <script src="/js/tools/lightDarkSwitch.js"></script>
 
+
+
+    
+<script src="/js/tools/localSearch.js"></script>
 
 
 

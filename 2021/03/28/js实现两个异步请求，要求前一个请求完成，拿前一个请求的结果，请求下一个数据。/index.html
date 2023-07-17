@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/2023/07/17/js实现两个异步请求，要求前一个请求完成，拿前一个请求的结果，请求下一个数据。/"/>
+    <link rel="canonical" href="http://example.com/2021/03/28/js实现两个异步请求，要求前一个请求完成，拿前一个请求的结果，请求下一个数据。/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -21,14 +21,15 @@
         <meta name="description" content="记录一下今天上班实战开发实现的一个功能：有两个异步请求，要求前面一个请求完成，拿前一个请求的结果,请求下一条数据。旨在记录，有不足之处请多多指教。废话不多说，开撸！第一种思路：使用 async&#x2F;await 语法来让两个异步请求有先后顺序执行例如： 123456789async getData() &amp;#123;  &#x2F;&#x2F; 发送第一个请求，获取 id  const res1 &#x3D; await t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js实现两个异步请求，要求前一个请求完成，拿前一个请求的结果，请求下一个数据。">
-<meta property="og:url" content="http://example.com/2023/07/17/js%E5%AE%9E%E7%8E%B0%E4%B8%A4%E4%B8%AA%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%EF%BC%8C%E8%A6%81%E6%B1%82%E5%89%8D%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E5%AE%8C%E6%88%90%EF%BC%8C%E6%8B%BF%E5%89%8D%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E7%9A%84%E7%BB%93%E6%9E%9C%EF%BC%8C%E8%AF%B7%E6%B1%82%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E3%80%82/index.html">
+<meta property="og:url" content="http://example.com/2021/03/28/js%E5%AE%9E%E7%8E%B0%E4%B8%A4%E4%B8%AA%E5%BC%82%E6%AD%A5%E8%AF%B7%E6%B1%82%EF%BC%8C%E8%A6%81%E6%B1%82%E5%89%8D%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E5%AE%8C%E6%88%90%EF%BC%8C%E6%8B%BF%E5%89%8D%E4%B8%80%E4%B8%AA%E8%AF%B7%E6%B1%82%E7%9A%84%E7%BB%93%E6%9E%9C%EF%BC%8C%E8%AF%B7%E6%B1%82%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E3%80%82/index.html">
 <meta property="og:site_name" content="李竞伟的个人博客">
 <meta property="og:description" content="记录一下今天上班实战开发实现的一个功能：有两个异步请求，要求前面一个请求完成，拿前一个请求的结果,请求下一条数据。旨在记录，有不足之处请多多指教。废话不多说，开撸！第一种思路：使用 async&#x2F;await 语法来让两个异步请求有先后顺序执行例如： 123456789async getData() &amp;#123;  &#x2F;&#x2F; 发送第一个请求，获取 id  const res1 &#x3D; await t">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/zan.jpg">
-<meta property="article:published_time" content="2023-07-17T01:42:13.499Z">
-<meta property="article:modified_time" content="2023-07-17T01:49:24.257Z">
+<meta property="article:published_time" content="2021-03-28T07:22:14.000Z">
+<meta property="article:modified_time" content="2023-07-17T05:49:57.186Z">
 <meta property="article:author" content="李竞伟">
+<meta property="article:tag" content="js运用">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/zan.jpg">
     
@@ -79,7 +80,7 @@
     <script id="hexo-configurations">
     let Global = window.Global || {};
     Global.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN"};
-    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":true,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/light.jpg","dark":"/images/dark.jpg"},"title":"李竞伟的踩坑日记","subtitle":{"text":["铁饭碗的真实含义不是在一个地方吃一辈子饭，而是一辈子到哪儿都有饭吃。"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":"https://github.com/wohaorea","instagram":null,"zhihu":null,"twitter":null,"email":"178220013@qq.com"}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.2.2","navbar":{"auto_hide":false,"color":{"left":"#fff","right":"#367df7","transparency":20},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":false,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":null},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":true,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":true,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/light.jpg","dark":"/images/dark.jpg"},"title":"李竞伟的踩坑日记","subtitle":{"text":["铁饭碗的真实含义不是在一个地方吃一辈子饭，而是一辈子到哪儿都有饭吃。"],"hitokoto":{"enable":true,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"links":{"github":"https://github.com/wohaorea","instagram":null,"zhihu":null,"twitter":null,"email":"178220013@qq.com"}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.2.2","navbar":{"auto_hide":false,"color":{"left":"#fff","right":"#367df7","transparency":20},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":{"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
     Global.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
     Global.data_config = {"masonry":false};
   </script>
@@ -164,10 +165,16 @@
                             </li>
                     
                     
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
                 </ul>
             </div>
             <!-- Mobile -->
             <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
                 
                 <div class="icon-item navbar-bar">
                     <div class="navbar-bar-middle"></div>
@@ -241,20 +248,47 @@
                             <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-07-17 09:42:13</span>
-        <span class="mobile">2023-07-17 09:42:13</span>
+        <span class="desktop">2021-03-28 15:22:14</span>
+        <span class="mobile">2021-03-28 15:22:14</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-07-17 09:49:24</span>
-            <span class="mobile">2023-07-17 09:49:24</span>
+            <span class="desktop">2023-07-17 13:49:57</span>
+            <span class="mobile">2023-07-17 13:49:57</span>
             <span class="hover-info">更新</span>
         </span>
     
 
     
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="/categories/%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0/">功能实现</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/js%E8%BF%90%E7%94%A8/">js运用</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
@@ -282,12 +316,12 @@
 <h3 id="第二种思路：使用-Promise-then-来让两个异步请求有先后顺序执行"><a href="#第二种思路：使用-Promise-then-来让两个异步请求有先后顺序执行" class="headerlink" title="第二种思路：使用 Promise.then()来让两个异步请求有先后顺序执行"></a>第二种思路：使用 Promise.then()来让两个异步请求有先后顺序执行</h3><p>实现代码如下：</p>
 <div class="highlight-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">getData1</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 发送第一个请求，获取 id</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">$http</span>.<span class="title function_">get</span>(<span class="string">&#x27;/api/get-id&#x27;</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">&#123; data &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">id</span> = data.<span class="property">id</span>;</span><br><span class="line">        <span class="title function_">resolve</span>();</span><br><span class="line">      &#125;).<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(err.<span class="property">msg</span>);</span><br><span class="line">        <span class="title function_">reject</span>(err.<span class="property">msg</span>);</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">getData2</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="title function_">getData1</span>().<span class="title function_">then</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">id</span>) <span class="comment">//此时的id就会正常出来；</span></span><br><span class="line">    <span class="comment">// 使用 id 发送第二个请求</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">$http</span>.<span class="title function_">get</span>(<span class="string">`/api/get-data?id=<span class="subst">$&#123;<span class="variable language_">this</span>.id&#125;</span>`</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">&#123; data &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span><br><span class="line">    &#125;).<span class="title function_">catch</span>(<span class="function"><span class="params">err2</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(err2.<span class="property">msg</span>);</span><br><span class="line">      <span class="title function_">reject</span>(err2.<span class="property">msg</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;).<span class="title function_">catch</span>(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(err.<span class="property">msg</span>);</span><br><span class="line">    <span class="title function_">reject</span>(err.<span class="property">msg</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 <p>这个思路主要是使用 Promise 来保证 getData1 函数的执行顺序。首先需要将 getData1 函数修改为返回一个 Promise 对象。在调用 getData1 的时候，使用 .then() 方法来执行后续操作。如果 执行出错，则会执行 .catch() 中的函数，可以在这个函数中进行错误处理。</p>
-<p><img  
+<p><figure class="image-caption"><img  
                      lazyload
                      src="/images/loading.svg"
                      data-src="/images/zan.jpg"
                       alt="赞！"
-                ><br>处理完毕！！！撒花！！</p>
+                ><figcaption>赞！</figcaption></figure><br>处理完毕！！！撒花！！</p>
 
             </div>
 
@@ -297,14 +331,14 @@
     <ul>
         <li><strong>标题:</strong> js实现两个异步请求，要求前一个请求完成，拿前一个请求的结果，请求下一个数据。</li>
         <li><strong>作者:</strong> 李竞伟</li>
-        <li><strong>创建于:</strong> 2023-07-17 09:42:13</li>
+        <li><strong>创建于:</strong> 2021-03-28 15:22:14</li>
         
             <li>
-                <strong>更新于:</strong> 2023-07-17 09:49:24
+                <strong>更新于:</strong> 2023-07-17 13:49:57
             </li>
         
         <li>
-            <strong>链接:</strong> https://redefine.ohevan.com/2023/07/17/js实现两个异步请求，要求前一个请求完成，拿前一个请求的结果，请求下一个数据。/
+            <strong>链接:</strong> https://redefine.ohevan.com/2021/03/28/js实现两个异步请求，要求前一个请求完成，拿前一个请求的结果，请求下一个数据。/
         </li>
         <li>
             <strong>版权声明:</strong> 本文章采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 进行许可。
@@ -316,6 +350,14 @@
             
 
             
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/js%E8%BF%90%E7%94%A8/">#js运用</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
 
             
 
@@ -325,13 +367,13 @@
                         <div class="article-prev">
                             <a class="prev"
                             rel="prev"
-                            href="/2023/07/17/vue%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8html2canvas%E5%BA%93%E5%AE%9E%E7%8E%B0%E7%BD%91%E9%A1%B5%E6%88%AA%E5%B1%8F%E7%9A%84%E5%8A%9F%E8%83%BD/"
+                            href="/2022/09/28/vue%E9%A1%B9%E7%9B%AE%E5%BC%95%E5%85%A5%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BEBMapGL%E5%92%8CBMap%E5%AE%9E%E4%BE%8B%EF%BC%8C%E4%BB%A5%E5%8F%8A%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7BMapGLLib%20%E7%9A%84%E5%BC%95%E5%85%A5%EF%BC%8CBMapGL%E9%BC%A0%E6%A0%87%E7%BB%98%E5%88%B6%E5%8A%9F%E8%83%BD/"
                             >
                                 <span class="left arrow-icon flex-center">
                                     <i class="fa-solid fa-chevron-left"></i>
                                 </span>
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">vue项目使用html2canvas库实现网页截屏的功能</span>
+                                    <span class="post-nav-title-item">vue项目引入百度地图BMapGL和BMap实例，以及辅助工具BMapGLLib 的引入，BMapGL鼠标绘制功能</span>
                                     <span class="post-nav-item">上一篇</span>
                                 </span>
                             </a>
@@ -341,10 +383,10 @@
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/07/14/vue%E9%A1%B9%E7%9B%AE%E5%BC%95%E5%85%A5%E7%99%BE%E5%BA%A6%E5%9C%B0%E5%9B%BEBMapGL%E5%92%8CBMap%E5%AE%9E%E4%BE%8B%EF%BC%8C%E4%BB%A5%E5%8F%8A%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7BMapGLLib%20%E7%9A%84%E5%BC%95%E5%85%A5%EF%BC%8CBMapGL%E9%BC%A0%E6%A0%87%E7%BB%98%E5%88%B6%E5%8A%9F%E8%83%BD/"
+                            href="/2021/01/15/js%E5%AE%9E%E7%8E%B0%E8%B6%85%E6%9C%80%E5%A4%A7%E8%8C%83%E5%9B%B4%E7%9A%84%E6%95%B0%E7%9B%B8%E5%8A%A0%E4%B9%8B%E5%92%8C/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">vue项目引入百度地图BMapGL和BMap实例，以及辅助工具BMapGLLib 的引入，BMapGL鼠标绘制功能</span>
+                                    <span class="post-nav-title-item">js实现超最大范围的数相加之和</span>
                                     <span class="post-nav-item">下一篇</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -357,50 +399,6 @@
             
 
 
-            
-                <div class="comment-container">
-                    <div class="comments-container">
-    <div id="comment-anchor"></div>
-    <div class="comment-area-title">
-        <i class="fa-solid fa-comments"></i>&nbsp;评论
-    </div>
-    
-
-        
-            
- 
-    <div id="waline"></div>
-    <script type="module"  data-pjax>
-        import { init } from 'https://evan.beee.top/js/waline.mjs';
-
-        function loadWaline() {
-            init({
-                el: '#waline',
-                serverURL: 'https://example.example.com',
-                lang: 'zh-CN',
-                dark: 'body[class~="dark-mode"]',
-                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
-            });
-        }
-
-        if ('true') {
-            const loadWalineTimeout = setTimeout(() => {
-                loadWaline();
-                clearTimeout(loadWalineTimeout);
-            }, 1000);
-        } else {
-            window.addEventListener('DOMContentLoaded', loadWaline);
-        }
-        
-    </script>
-
-
-
-        
-    
-</div>
-
-                </div>
             
         </div>
 
@@ -505,10 +503,6 @@
 
         <!-- go comment -->
         
-            <li class="go-comment">
-                <i class="fa-regular fa-comments"></i>
-            </li>
-        
     </ul>
 </div>
 
@@ -566,6 +560,35 @@
 
 
     
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 
 
 </main>
@@ -583,6 +606,10 @@
 
 <script src="/js/tools/lightDarkSwitch.js"></script>
 
+
+
+    
+<script src="/js/tools/localSearch.js"></script>
 
 
 
